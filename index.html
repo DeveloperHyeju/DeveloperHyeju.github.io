@@ -8,17 +8,77 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="wrqp">
-    <header></header>
-    <div class="container">
-      <div class="conteiner-header"></div>
-      <div class="top-container">
-        
-      </div>
-      <div class="bottom-container">
+  <div class="wrap">
 
+    <header>
+      <h1 class="logo">
+        <img src="" alt="로고"/>
+      </h1> 
+      <!-- 로고 만들어서 추가하기 -->
+    </header>
+    <!-- header end -->
+
+    <div class="container">
+
+      <div class="top-container">
+        <div class="inner">
+          <div class="search-box">
+            <form>
+              <input type="text" name="searchItems" class="search-input" placeholder="search Items"/>
+              <button type="submit" class="search-btn"></button>
+            </form>
+          </div>
+
+          <button class="btn s-btn main-color-btn">New item</button>
+        </div>
       </div>
+      <!-- top-container end -->
+    
+      <div class="bottom-container">
+        <div class="inner">
+
+          <section>
+            <div class="section-header">
+              <h2 class="section-tit">Todo <span class="count label gray-label">3</span></h2>
+              <div class="util">
+                <div class="btn xs-btn gray-btn add-btn"></div>
+                <div class="btn xs-btn gray-btn more-btn">
+                  <div class="drop-down">
+                    <ul>
+                      <li>리스트</li>
+                      <li>리스트</li>
+                    </ul>
+                  </div>
+                  <!-- drop-down end -->
+                </div>
+                <!-- more-btn end -->
+              </div>
+              <!-- util end -->
+            </div>
+             
+            <div class="item-list">
+              <!-- 리스트인데, ul/li로 넣으면 드래그 앤 드롭이 안되려나? 확인하고 수정하자! -->
+              <div class="item">
+                <div class="top-item">
+                  <h3 class="item-tit">아침밥 먹기🍚</h3>
+                  <p class="desc">아침에 일어나서 환기시키고 페브리즈 뿌린 후, 요리해서 아침밥 챙겨먹기!</p>
+                </div>
+                <div class="bottom-item">
+                  <p class="date">2022-11-10</p>
+                  <p class="time">08:00</p>
+                  <p class="priority"></p>
+                </div>
+              </div>
+              <!-- item end -->
+            </div>
+            <!-- item-list end -->
+          </section>
+          <!-- section end -->
+        </div>
+      </div>
+      <!-- bottom-container end -->
     </div>
+    <!-- container end -->
   </div>
 </body>
 </html>
