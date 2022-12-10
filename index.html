@@ -1,84 +1,335 @@
-
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/509d22bb91.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' href='./resources/css/todolist.css?ver=0.0.0' />
+    <link rel='stylesheet' type='text/css' href='./resources/css/reset.css' />
+    <title>Todo List</title>
 </head>
+
 <body>
-  <div class="wrap">
-
-    <header>
-      <h1 class="logo">
-        <img src="" alt="로고"/>
-      </h1> 
-      <!-- 로고 만들어서 추가하기 -->
-    </header>
-    <!-- header end -->
-
-    <div class="container">
-
-      <div class="top-container">
-        <div class="inner">
-          <div class="search-box">
-            <form>
-              <input type="text" name="searchItems" class="search-input" placeholder="search Items"/>
-              <button type="submit" class="search-btn"></button>
-            </form>
-          </div>
-
-          <button class="btn s-btn main-color-btn">New item</button>
-        </div>
-      </div>
-      <!-- top-container end -->
-    
-      <div class="bottom-container">
-        <div class="inner">
-
-          <section>
-            <div class="section-header">
-              <h2 class="section-tit">Todo <span class="count label gray-label">3</span></h2>
-              <div class="util">
-                <div class="btn xs-btn gray-btn add-btn"></div>
-                <div class="btn xs-btn gray-btn more-btn">
-                  <div class="drop-down">
-                    <ul>
-                      <li>리스트</li>
-                      <li>리스트</li>
-                    </ul>
-                  </div>
-                  <!-- drop-down end -->
-                </div>
-                <!-- more-btn end -->
-              </div>
-              <!-- util end -->
+<div class="body-wrap">
+    <div class="wrap view flex-c">
+        <div class="header view">
+            <div class="icon-div cc">
+                <i class="fa-solid fa-layer-group header-icon"></i>
+                <span class="header-f">Backlog</span>
             </div>
-             
-            <div class="item-list">
-              <!-- 리스트인데, ul/li로 넣으면 드래그 앤 드롭이 안되려나? 확인하고 수정하자! -->
-              <div class="item">
-                <div class="top-item">
-                  <h3 class="item-tit">아침밥 먹기🍚</h3>
-                  <p class="desc">아침에 일어나서 환기시키고 페브리즈 뿌린 후, 요리해서 아침밥 챙겨먹기!</p>
-                </div>
-                <div class="bottom-item">
-                  <p class="date">2022-11-10</p>
-                  <p class="time">08:00</p>
-                  <p class="priority"></p>
-                </div>
-              </div>
-              <!-- item end -->
+            <div class="icon-div cc">
+                <i class="fa-sharp fa-solid fa-clipboard-list header-icon on"></i>
+                <span class="header-f on">Board</span>
             </div>
-            <!-- item-list end -->
-          </section>
-          <!-- section end -->
+            <div class="icon-div cc">
+                <i class="fa-solid fa-square-rss header-icon"></i>
+                <span class="header-f">Feed</span>
+            </div>
+            <div class="icon-div cc">
+                <i class="fa-sharp fa-solid fa-chart-simple header-icon"></i>
+                <span class="header-f">Reports</span>
+            </div>
         </div>
-      </div>
-      <!-- bottom-container end -->
+        <div class="container flex-i">
+            <div class="container-header">
+                <div class="team-title">
+                    Product Design Team
+                </div>
+            </div>
+            <div class="top-container">
+                <div class="search-div">
+                    <div class="search-box">
+                        <input type="search" value="" placeholder="Search Items" class="search-input">
+                        <button type="submit" class="search-button">
+                            <div class="submit-button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="btn-div">
+                    <div class="btn bc-blue cc">
+                        <div class="btn-icon fc-white">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="btn-title fc-white">
+                            New Item
+                        </div>
+                    </div>
+                    <div class="btn bc-white cc">
+                        <div class="btn-icon fc-darkwhite">
+                            <i class="fa-solid fa-filter"></i>
+                        </div>
+                        <div class="btn-title fc-darkwhite">
+                            Filter
+                        </div>
+                    </div>
+                    <div class="btn bc-white cc">
+                        <div class="btn-title fc-darkwhite">
+                            Board
+                        </div>
+                        <div class="btn-icon fc-darkwhite">
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-container">
+                <div class="section">
+                    <div class="section-hearder">
+                        <div class="header-div">
+                            <div class="title">
+                                To do
+                            </div>
+                        </div>
+                        <div class="btn-div">
+                            <span class='fa-stack fa-1x cc'>
+                                <i class="fa-solid fa-circle fa-stack-1x fc-icon-color hear-in-icon"></i>
+                                <i class="fa-solid fa-plus fa-stack-1x stack-in-icon fc-darkwhite"></i>
+                            </span>
+                            <span class='fa-stack fa-1x cc'>
+                                <i class="fa-solid fa-circle fa-stack-1x fc-icon-color hear-in-icon"></i>
+                                <i class="fa-solid fa-ellipsis fa-stack-1x stack-in-icon fc-darkwhite"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="section-container">
+                        <div class="item">
+                            <div class="item-header">
+                                <span class="item-header-title">
+                                    이런저런 이야기들
+                                </span>
+                            </div>
+                            <div class="item-contents">
+                                <span class="cont">이런저런 이야기</span>
+                            </div>
+                            <div class="item-cp-box">
+                                <span class="item-cp-box-title cpc-green">
+                                    WHATSTHIS?
+                                </span>
+                            </div>
+                            <div class="item-clip">
+                                <div class="clip-file fc-darkwhite">
+                                    <i class="fa-solid fa-file cc"></i>
+                                    <span class="file-count">3</span>
+                                </div>
+                                <div class="clip-link fc-pink">
+                                    <i class="fa-solid fa-flag cc"></i>
+                                </div>
+                                <div class="clip-time fc-darkwhite">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span class="time-string">11-28</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-header">
+                                <span class="item-header-title">
+                                    한일전 경기 관람
+                                </span>
+                            </div>
+                            <div class="item-contents">
+                                <span>한국 VS 가나 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다 비긴다</span>
+                            </div>
+                            <div class="item-cp-box">
+                                <span class="item-cp-box-title cpc-pink">
+                                    WHATSTHIS?
+                                </span>
+                            </div>
+                            <div class="item-clip">
+                                <div class="clip-file fc-darkwhite">
+                                    <i class="fa-solid fa-file cc"></i>
+                                    <span class="file-count">3</span>
+                                </div>
+                                <div class="clip-link fc-green">
+                                    <i class="fa-solid fa-flag cc"></i>
+                                </div>
+                                <div class="clip-time fc-darkwhite">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span class="time-string">11-28</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-hearder">
+                        <div class="header-div">
+                            <div class="title">
+                                In progress
+                            </div>
+                        </div>
+                        <div class="btn-div">
+                            <span class='fa-stack fa-1x cc'>
+                                <i class="fa-solid fa-circle fa-stack-1x fc-icon-color hear-in-icon"></i>
+                                <i class="fa-solid fa-plus fa-stack-1x stack-in-icon fc-darkwhite"></i>
+                            </span>
+                            <span class='fa-stack fa-1x cc'>
+                                <i class="fa-solid fa-circle fa-stack-1x fc-icon-color hear-in-icon"></i>
+                                <i class="fa-solid fa-ellipsis fa-stack-1x stack-in-icon fc-darkwhite"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="section-container">
+                        <div class="item">
+                            <div class="item-header">
+                                <span class="item-header-title">
+                                    여긴 머하는 곳임?
+                                </span>
+                            </div>
+                            <div class="item-contents">
+                                <span>나도 모름</span>
+                            </div>
+                            <div class="item-cp-box">
+                                <span class="item-cp-box-title cpc-green">
+                                    WHATSTHIS?
+                                </span>
+                            </div>
+                            <div class="item-clip">
+                                <div class="clip-file fc-darkwhite">
+                                    <i class="fa-solid fa-file cc"></i>
+                                    <span class="file-count">3</span>
+                                </div>
+                                <div class="clip-link fc-pink">
+                                    <i class="fa-solid fa-flag cc"></i>
+                                </div>
+                                <div class="clip-time fc-darkwhite">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span class="time-string">11-28</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-hearder">
+                        <div class="header-div">
+                            <div class="title">
+                                In review
+                            </div>
+                        </div>
+                        <div class="btn-div">
+                            <span class='fa-stack fa-1x cc'>
+                                <i class="fa-solid fa-circle fa-stack-1x fc-icon-color hear-in-icon"></i>
+                                <i class="fa-solid fa-plus fa-stack-1x stack-in-icon fc-darkwhite"></i>
+                            </span>
+                            <span class='fa-stack fa-1x cc'>
+                                <i class="fa-solid fa-circle fa-stack-1x fc-icon-color hear-in-icon"></i>
+                                <i class="fa-solid fa-ellipsis fa-stack-1x stack-in-icon fc-darkwhite"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="section-container">
+                        <div class="item">
+                            <div class="item-header">
+                                <span class="item-header-title">
+                                    가나다라 마바사
+                                </span>
+                            </div>
+                            <div class="item-contents">
+                                <span>가나다라마바사 아자차카타파하 에헤~이야이야 이야야</span>
+                            </div>
+                            <div class="item-cp-box">
+                                <span class="item-cp-box-title cpc-orange">
+                                    WHATSTHIS?
+                                </span>
+                            </div>
+                            <div class="item-clip">
+                                <div class="clip-file fc-darkwhite">
+                                    <i class="fa-solid fa-file cc"></i>
+                                    <span class="file-count">3</span>
+                                </div>
+                                <div class="clip-link fc-green">
+                                    <i class="fa-solid fa-flag cc"></i>
+                                </div>
+                                <div class="clip-time fc-darkwhite">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span class="time-string">11-28</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-hearder">
+                        <div class="header-div">
+                            <div class="title">
+                                Done
+                            </div>
+                        </div>
+                        <div class="btn-div">
+                            <span class='fa-stack fa-1x cc'>
+                                <i class="fa-solid fa-circle fa-stack-1x fc-icon-color hear-in-icon"></i>
+                                <i class="fa-solid fa-plus fa-stack-1x stack-in-icon fc-darkwhite"></i>
+                            </span>
+                            <span class='fa-stack fa-1x cc'>
+                                <i class="fa-solid fa-circle fa-stack-1x fc-icon-color hear-in-icon"></i>
+                                <i class="fa-solid fa-ellipsis fa-stack-1x stack-in-icon fc-darkwhite"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="section-container">
+                        <div class="item">
+                            <div class="item-header">
+                                <span class="item-header-title">
+                                    ??
+                                </span>
+                            </div>
+                            <div class="item-contents">
+                                <span>모름</span>
+                            </div>
+                            <div class="item-cp-box">
+                                <span class="item-cp-box-title cpc-blue">
+                                    WHATSTHIS?
+                                </span>
+                            </div>
+                            <div class="item-clip">
+                                <div class="clip-file fc-darkwhite">
+                                    <i class="fa-solid fa-file cc"></i>
+                                    <span class="file-count">3</span>
+                                </div>
+                                <div class="clip-link fc-pink">
+                                    <i class="fa-solid fa-flag cc"></i>
+                                </div>
+                                <div class="clip-time fc-darkwhite">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span class="time-string">11-28</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal">
+                <div class="top-modal">
+                    <h3 class="modal-title">NEW PROJECT</h3>
+                    <button class="btn close-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="bottom-modal">
+                    <form>
+                        <div class="title-row">
+                            <label for="project-title">Title</label>
+                            <input type="text" id="project-title" name="title" value="" placeholder="제목을 입력해주세요."/>
+                        </div>
+                        <div class="content-row">
+                            <label for="project-contents">Contents</label>
+                            <textarea id="project-contents" name="contents" value="" placeholder="내용을 입력해주세요."></textarea>
+                        </div>
+                        <div class="btn-row">
+                            <button class="btn btn-white">Cancle</button>
+                            <button class="btn btn-main">Create Project</button>
+                        </div>
+                            
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- container end -->
-  </div>
+</div>
 </body>
+
 </html>
